@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>РУССКИЙ.exe — олимпиада 7 класс</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#0d0d0f;--pn:#17171b;--tx:#d8ffd8;--mu:#7d8a7d;--a:#39ff14;--c:#9d4edd;--br:1px solid #2e3a2e;--r:2px;--ff:"Courier New",monospace;--ok:#39ff14;--no:#ff3b3b;--bt:#0d0d0f;--bgi:repeating-linear-gradient(0deg,#ffffff07 0 1px,transparent 1px 3px)}
+[data-th=cute]{--bg:#fff4ec;--pn:#fffdf8;--tx:#6b4a5a;--mu:#b08a9a;--a:#ff8fb8;--c:#b8e0d2;--br:2px dashed #ffb8d1;--r:18px;--ff:"Trebuchet MS","Segoe UI",sans-serif;--ok:#4cb88a;--no:#e0607e;--bt:#fff;--bgi:radial-gradient(#ffd6e7 2px,transparent 2px) 0 0/24px 24px}
+[data-th=cyber]{--bg:#050b24;--pn:#0b1538;--tx:#cfe9ff;--mu:#6f86b8;--a:#00e5ff;--c:#ff2bd6;--br:1px solid #00e5ff66;--r:4px;--ff:Consolas,"Lucida Console",monospace;--ok:#00ffa3;--no:#ff4d6d;--bt:#050b24;--bgi:linear-gradient(#00e5ff12 1px,transparent 1px) 0 0/32px 32px,linear-gradient(90deg,#00e5ff12 1px,transparent 1px) 0 0/32px 32px}
+[data-th=classic]{--bg:#f5f7fa;--pn:#fff;--tx:#233044;--mu:#7a8799;--a:#3b6fd4;--c:#9db4d8;--br:1px solid #dde3ec;--r:8px;--ff:system-ui,"Segoe UI",Arial,sans-serif;--ok:#2e9e5b;--no:#d64545;--bt:#fff;--bgi:none}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bgi);background-color:var(--bg);color:var(--tx);font:15px/1.5 var(--ff);transition:background .5s,color .5s}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:8px;align-items:center;padding:8px 12px;background:var(--pn);border-bottom:var(--br);transition:.5s}
+.brand{color:var(--a);white-space:nowrap}.top input{flex:1;min-width:0}
+.app{display:flex;min-height:80vh}nav{width:190px;padding:12px;display:flex;flex-direction:column;gap:6px;flex:none}main{flex:1;padding:14px;min-width:0;max-width:900px}
+.pn,.card{background:var(--pn);border:var(--br);border-radius:var(--r);padding:14px;margin:0 0 12px;transition:.5s}
+button,input,select,textarea{font:inherit;color:var(--tx);background:var(--pn);border:var(--br);border-radius:var(--r);padding:8px 12px;transition:.25s;max-width:100%}
+textarea{width:100%;min-height:70px}button{cursor:pointer}button:hover,.on{background:var(--a);color:var(--bt)}button:disabled{opacity:.7;cursor:default}
+nav button{text-align:left}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.op{display:block;width:100%;text-align:left;margin:6px 0}.good{background:var(--ok)!important;color:#000!important}.bad{background:var(--no)!important;color:#fff!important}
+.ok{color:var(--ok)}.no{color:var(--no)}.tg{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--mu)}.tg span{border:var(--br);border-radius:var(--r);padding:1px 8px}.fl{margin-left:auto;padding:2px 8px}
+.q{font-size:17px;margin:10px 0}.ad{border:var(--br);padding:8px;border-radius:var(--r)}
+.gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}.gr .pn b,.big{font-size:24px;color:var(--a)}
+.bar{height:8px;background:var(--bg);border:var(--br);border-radius:var(--r);overflow:hidden}.bar i{display:block;height:100%;background:var(--a)}
+.lk{opacity:.4}.link{cursor:pointer}.link:hover{border-color:var(--a)}
+.thw{position:relative}#thm{position:absolute;right:0;top:110%;background:var(--pn);border:var(--br);border-radius:var(--r);padding:8px;display:flex;flex-direction:column;gap:6px;min-width:190px}#thm[hidden]{display:none}
+#thm button{display:flex;gap:10px;align-items:center}.pv{display:inline-flex;width:46px;height:26px;border:1px solid #888;border-radius:6px;overflow:hidden;align-items:flex-end}.pv i{flex:1;height:55%}
+.ts{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--a);color:var(--bt);padding:10px 16px;border-radius:var(--r);z-index:9}
+h2::before{content:"> ";color:var(--a)}[data-th=cute] h2::before{content:"✿ "}[data-th=cute] h2::after{content:" ♡"}[data-th=classic] h2::before{content:""}
+[data-th=cyber] h2,[data-th=cyber] .big{text-shadow:0 0 8px var(--a)}[data-th=cyber] button:hover,[data-th=cyber] .on,[data-th=cyber] .pn{box-shadow:0 0 10px #00e5ff33}[data-th=cyber] .on{box-shadow:0 0 12px var(--a)}
+[data-th=alt] .pn,[data-th=alt] .card{border-left:3px solid var(--c)}[data-th=alt] h2::after{content:"_";animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+[data-th=cute] .pn,[data-th=cute] .card{box-shadow:4px 4px 0 var(--c)}
+@media(max-width:720px){.app{display:block}nav{width:auto;flex-direction:row;overflow-x:auto;padding:8px 12px}nav button{white-space:nowrap}main{padding:10px}}
+</style></head><body>
+<header class="top"><b class="brand">РУССКИЙ.exe</b><input id="sq" placeholder="Поиск по теории и заданиям…"><div class="thw"><button id="thb">THEME ▾</button><div id="thm" hidden></div></div></header>
+<div class="app"><nav id="nv"></nav><main id="m"></main></div>
+<script>
+const $=s=>document.querySelector(s),n=s=>String(s).toLowerCase().replace(/ё/g,'е').replace(/[^а-яa-z0-9 ]/g,'').replace(/\s+/g,' ').trim(),esc=s=>s.replace(/[<>&"]/g,'');
+const TP={orf:"Орфография",pun:"Пунктуация",mor:"Морфология",sin:"Синтаксис",fon:"Фонетика",lek:"Лексика",fra:"Фразеология",slo:"Словообразование",mfm:"Морфемика",sti:"Стилистика",kul:"Культура речи"},LV=["BASIC","ADVANCED","OLYMPIAD"];
+const TH={orf:"Проверяй безударные гласные подбором однокоренного слова. В суффиксах -ан-, -ян-, -ин- одна Н (кроме стеклянный, оловянный, деревянный). ПРЕ- = «очень» или «пере-», ПРИ- = приближение, присоединение. НЕ с глаголами — раздельно, кроме слов без НЕ (ненавидеть). <i>Пример: прекрасный, приклеить.</i>",
+pun:"Запятая отделяет однородные члены (без одиночного И), части сложного предложения, обращения и обособленные обороты. Деепричастный оборот выделяется запятыми. Тире — между подлежащим и сказуемым-существительными. <i>Пример: Войдя в класс, он поздоровался.</i>",
+mor:"В 7 классе: причастие (какой? — читающий), деепричастие (что делая? — читая), наречие, предлоги, союзы, частицы. НЕ с наречиями на -о/-е слитно, если есть синоним без НЕ; раздельно при противопоставлении (не близко, а далеко).",
+sin:"Основа предложения — подлежащее и сказуемое. Чтобы определить тип предложения, найди все грамматические основы. Сложные предложения: сочинённые (ССП), подчинённые (СПП), бессоюзные (БСП). Безличные предложения не имеют подлежащего.",
+fon:"Звук — это не буква. Звонкие согласные оглушаются на конце слова и перед глухими. Буквы е, ё, ю, я дают два звука в начале слова и после гласных, ь, ъ. <i>Пример: ёлка — [й’олка], 5 звуков.</i>",
+lek:"Лексика изучает значения слов: синонимы, антонимы, омонимы, паронимы, архаизмы, неологизмы, заимствования, многозначность. Значение уточняй по словарю.",
+fra:"Фразеологизм — устойчивое сочетание слов с цельным значением; в предложении он — один член. Нельзя менять слова местами. <i>Пример: бить баклуши = бездельничать.</i>",
+slo:"Способы: приставочный, суффиксальный, приставочно-суффиксальный, бессуффиксный (усечение), сложение, переход в другую часть речи. <i>Пример: подснежник — приставочно-суффиксальный.</i>",
+mfm:"Морфемы: приставка, корень, суффикс, окончание. Корень — общая часть однокоренных слов. Не путай омонимичные корни (водить / вода). <i>Пример: без-облак-н-ый.</i>",
+sti:"Стили речи: разговорный, научный, официально-деловой, публицистический, художественный. Слова бывают нейтральные, высокие и сниженные: лицо — лик — физиономия.",
+kul:"Нормы: орфоэпические (звонИт, тОрты), лексические (надеть/одеть), грамматические (по приезде, согласно приказу, оплатить проезд)."};
+const T=[
+["orf",0,"В каком слове пишется одна буква Н?",["стеклянный","оловянный","деревянный","кожаный"],3,"В суффиксах -ан-, -ян-, -ин- пишется одна Н. Исключения: стеклянный, оловянный, деревянный. Пример: песчаный, глиняный.",1],
+["orf",0,"Какой глагол пишется с НЕ слитно?",["(не)видеть","(не)навидеть","(не)читать","(не)отвечать"],1,"«Ненавидеть» без НЕ не употребляется. Пример: негодовать, недомогать."],
+["orf",0,"Вставьте пропущенную букву в слове «зар_сли» (густые заросли у реки).",null,["о"],"В корнях -раст-/-ращ-/-рос- пишется О перед С без Т. Пример: вырос, росла."],
+["orf",1,"В каком слове пишется приставка ПРИ-?",["пр_красный","пр_клеить","пр_одолеть","пр_небрежение"],1,"ПРИ- значит приближение, присоединение, неполноту действия. ПРЕ- = «очень» (прекрасный) или «пере-» (преодолеть). Пример: пришить, приоткрыть."],
+["orf",0,"В каком слове на конце пишется Ь?",["ключ","плащ","рожь","мяч"],2,"Существительные ж. р. на шипящую пишут Ь; м. р. — без Ь. Пример: мышь, ночь; но: товарищ, малыш.",1],
+["orf",0,"В каком слове нужно писать разделительный Ъ?",["об_ём","в_юга","кол_цо","руч_ей"],0,"Ъ пишется после приставки на согласную перед е, ё, ю, я. В остальных словах — Ь. Пример: подъезд, съёмка."],
+["pun",0,"Где нужна запятая в предложении «Прочитав книгу Саша лёг спать»?",["после слова «книгу»","после слова «Саша»","запятая не нужна"],0,"Деепричастный оборот выделяется запятыми: Прочитав книгу, Саша лёг спать. Пример: Улыбаясь, она вошла.",1],
+["pun",0,"Выберите верно оформленное предложение.",["Мы ждали, что автобус придёт.","Мы ждали что, автобус придёт.","Мы ждали что автобус, придёт."],0,"Запятая ставится перед союзом «что». Пример: Я знаю, что ты прав.",1],
+["pun",1,"В каком предложении причастный оборот НЕ выделяется запятыми?",["Дом, стоящий на холме, виден издалека.","Стоящий на холме дом виден издалека.","Лес, окутанный туманом, молчал."],1,"Причастный оборот перед определяемым словом не обособляется; после слова — выделяется. Пример: Освещённая луной дорога блестела.",1],
+["pun",0,"Сколько запятых нужно в предложении: «Он сказал что завтра приедет и привезёт подарки»? Ответ — цифрой.",null,["1","одна"],"Запятая нужна перед «что». «Приедет» и «привезёт» — однородные сказуемые с одиночным И, запятая не нужна. Пример: Он пришёл и сел."],
+["pun",1,"В каком предложении нужно поставить тире?",["Рига столица Латвии.","Лиса хитрая.","Мы идём домой.","Он быстро бежал."],0,"Тире ставится между подлежащим и сказуемым, выраженными существительными в именительном падеже. Пример: Москва — столица России."],
+["pun",0,"Сколько запятых нужно в предложении «Мама я вернусь поздно»? Ответ — цифрой.",null,["1","одна"],"Обращение выделяется запятыми: Мама, я вернусь поздно. Пример: Скажи, Катя, где ты была?",1],
+["mor",0,"Какая часть речи слово «жарко» в предложении «На улице жарко»?",["наречие","категория состояния","прилагательное","глагол"],1,"Слово называет состояние и является сказуемым безличного предложения — это категория состояния. Пример: Мне весело. В доме тихо."],
+["mor",0,"Какое из слов — причастие?",["читающий","читая","читать","читал"],0,"Причастие отвечает на вопрос «какой?» и имеет суффиксы -ущ-, -ющ-, -ащ-, -ящ-. Пример: бегущий."],
+["mor",1,"Какое из слов — деепричастие?",["лежащий","лёжа","лежал","лежать"],1,"Деепричастие отвечает на вопрос «что делая?» и не изменяется. Пример: читая, сидя."],
+["mor",1,"Как пишется НЕ: «(Не)высоко, а низко летели птицы»?",["слитно","раздельно"],1,"При противопоставлении (с союзом «а») НЕ с наречием пишется раздельно. Пример: не близко, а далеко."],
+["mor",2,"Как пишется слово в предложении: «Мне (не)кого спросить»?",["слитно: некого","раздельно: не кого"],0,"Отрицательные местоимения с ударным НЕ- пишутся слитно: некого, нечего. Пример: Мне нечего читать."],
+["sin",0,"Сколько грамматических основ в предложении «Когда пришла весна, птицы вернулись»? Ответ — цифрой.",null,["2","две"],"Основы: «пришла весна» и «птицы вернулись». Пример: Идёт дождь, и дует ветер — 2 основы.",1],
+["sin",0,"Определите тип предложения: «Какое чудесное утро!»",["повествовательное, восклицательное","вопросительное, невосклицательное","побудительное, восклицательное","повествовательное, невосклицательное"],0,"Предложение сообщает и произносится с восклицательной интонацией. Пример: Как красиво вокруг!",1],
+["sin",1,"Какое предложение — сложносочинённое?",["Я знаю, что ты придёшь.","Пошёл дождь, и мы вернулись домой.","Когда стемнело, зажгли свет.","Он пришёл и ушёл."],1,"В ССП части равноправны и соединены сочинительным союзом. Остальные: два сложноподчинённых («Я знаю, что…», «Когда стемнело…») и простое с однородными сказуемыми. Пример: Светило солнце, и пели птицы."],
+["sin",1,"Что является подлежащим в предложении «В лесу пахло грибами»?",["лес","грибы","подлежащего нет","пахло"],2,"Это безличное предложение: есть только сказуемое «пахло», «грибами» — дополнение. Пример: Вечерело. Мне не спится."],
+["sin",1,"В каком предложении есть однородные члены?",["Ветер дул, дождь лил.","Шёл снег и дождь.","Шёл снег, пошёл дождь.","Снег шёл, и дождь шёл."],1,"«Снег и дождь» — однородные подлежащие. В остальных предложениях — части сложных предложений. Пример: В саду цвели розы и тюльпаны."],
+["fon",0,"Сколько звуков в слове «ёлка»? Ответ — цифрой.",null,["5","пять"],"[й’ол-ка]: Ё даёт два звука [й’о]. Всего 5 звуков при 4 буквах. Пример: юла — 4 звука, 3 буквы."],
+["fon",1,"Какой последний звук в слове «мороз»?",["звонкий [з]","глухой [с]","мягкий [з’]","гласный"],1,"На конце слова звонкие согласные оглушаются: мороз — [марос]. Пример: хлеб — [хл’еп]."],
+["fon",0,"В каком слове звуков больше, чем букв?",["мама","мышь","юла","сон"],2,"Буква ю в начале слова даёт два звука: юла — [й’у-ла]. Пример: яма, ёж.",1],
+["lek",0,"Слова, противоположные по значению, называются...",["синонимами","антонимами","омонимами","паронимами"],1,"Антонимы: добрый — злой, громкий — тихий. Пример: день — ночь.",1],
+["lek",1,"Выберите пару паронимов.",["одеть — надеть","лук (овощ) — лук (оружие)","добрый — злой","идти — шагать"],0,"Паронимы — близкие по звучанию, но разные по значению слова. Пример: адресат — адресант."],
+["lek",1,"Слова «лук» (овощ) и «лук» (оружие) — это...",["синонимы","омонимы","паронимы","антонимы"],1,"Омонимы звучат и пишутся одинаково, но значения не связаны. Пример: ключ (родник) — ключ (от замка)."],
+["lek",2,"Какое слово — архаизм (устаревшее название)?",["перст","палец","кисть","рука"],0,"«Перст» — устаревшее слово, современное — «палец». Пример: око — глаз, ланиты — щёки."],
+["fra",0,"Что значит фразеологизм «бить баклуши»?",["бездельничать","усердно трудиться","ссориться","обманывать"],0,"Баклуши — чурки для ложек; их заготовка считалась лёгкой работой. Пример: Хватит бить баклуши!",1],
+["fra",0,"Фразеологизм «как снег на голову» означает...",["неожиданно","холодно","медленно","радостно"],0,"Так говорят о внезапном появлении. Пример: Гости свалились как снег на голову."],
+["fra",1,"Замените фразеологизм «во весь дух» одним словом.",null,["быстро","стремительно","скоро","очень быстро"],"«Во весь дух» значит «очень быстро». Пример: сломя голову — стремительно."],
+["fra",1,"Подберите фразеологизм: «Он работал ___» (очень усердно).",["засучив рукава","спустя рукава","сложа руки","на скорую руку"],0,"Спустя рукава — небрежно; сложа руки — бездельничая; на скорую руку — наспех. Пример: взяться за дело засучив рукава."],
+["fra",2,"Фразеологизм «ахиллесова пята» означает...",["слабое место","сильная сторона","быстрый бег","главная цель"],0,"Выражение из мифа об Ахиллесе, уязвимом в пяту. Пример: Математика — его ахиллесова пята."],
+["slo",1,"Каким способом образовано слово «подснежник»?",["приставочно-суффиксальным","приставочным","суффиксальным","сложением"],0,"Под- + снег + -ник присоединяются одновременно (от «под снегом»). Пример: подоконник, подберёзовик."],
+["slo",0,"Слово «самолёт» образовано способом...",["сложения","суффиксальным","приставочным","перехода"],0,"Две основы: сам + лёт. Пример: пароход, садовод.",1],
+["slo",2,"Слово «синь» образовано от «синий» способом...",["бессуффиксным","суффиксальным","приставочным","сложением"],0,"Отброшены суффикс и окончание: синий — синь. Пример: тихий — тишь."],
+["mfm",0,"Выделите корень слова «безводный». Напишите его.",null,["вод"],"без-вод-н-ый: корень -вод- (вода). Пример: подводный — тот же корень."],
+["mfm",1,"Сколько морфем в слове «безоблачный»? Ответ — цифрой.",null,["4","четыре"],"без- (приставка), -облак- (корень), -н- (суффикс), -ый (окончание). Пример: подводный — 4 морфемы."],
+["mfm",2,"Однокоренные ли слова «водитель» и «водный»?",["да","нет"],1,"Водитель — от «водить», водный — от «вода»: корни омонимичны, но разные. Пример: водить, вождь; вода, водяной."],
+["sti",0,"Какой стиль речи характерен для заявления и справки?",["официально-деловой","художественный","научный","разговорный"],0,"Официально-деловой стиль — это точность и стандартные обороты. Пример: прошу предоставить…"],
+["sti",1,"К какому стилю относится слово «зенки» (глаза)?",["просторечное","научное","официально-деловое","высокое (книжное)"],0,"Это грубоватое просторечие. Нейтральное — «глаза», высокое — «очи». Пример: морда — лицо — лик."],
+["sti",1,"Какое слово стилистически нейтрально?",["лик","лицо","физиономия","морда"],1,"«Лик» — высокое, «физиономия» — разговорное, «морда» — грубое. Пример: вкушать — есть — трескать."],
+["kul",0,"Укажите верное ударение.",["звОнит","звонИт"],1,"Норма: звонИт, звонИшь. Пример: включИт, дОговор."],
+["kul",0,"Как правильно: «Он ___ пальто»?",["одел","надел"],1,"Надевают что-то (пальто), одевают кого-то. Пример: надеть шапку, одеть ребёнка.",1],
+["kul",1,"Исправьте просторечие «ихний друг». Напишите верный вариант (два слова).",null,["их друг"],"Нормативно — «их друг»; «ихний» — просторечие. Пример: их дом."],
+["kul",1,"Как правильно?",["оплатить проезд","оплатить за проезд"],0,"«Оплатить» требует винительного падежа без предлога. Пример: оплатить покупку; но заплатить за покупку."],
+["kul",2,"Укажите верное ударение.",["красивЕе","красИвее"],1,"Норма: красИвее. Запомни это слово в списке трудных."],
+["kul",2,"Укажите верное ударение: «вкусные ___».",["тортЫ","тОрты"],1,"Норма: тОрты, тОртов. Пример: бАнты, шАрфы."],
+["kul",2,"Как правильно: «Согласно ___»?",["приказа","приказу"],1,"Предлог «согласно» требует дательного падежа. Пример: вопреки ожиданиям, благодаря помощи."],
+["mor",1,"В каком предложении слово «стекло» является глаголом?",["Молоко стекло со стола.","Он протёр стекло платком.","Стекло в окне треснуло.","Это стекло очень прочное."],0,"«Стекло» — глагол прошедшего времени среднего рода (что сделало? — от «стечь»). В остальных предложениях это существительное. Пример: Вода стекла по стене."],
+["mor",1,"В каком предложении слово «вокруг» является наречием?",["Вокруг стояла тишина.","Вокруг дома росли яблони.","Мы шли вокруг озера.","Вокруг пруда росли ивы."],0,"Наречие не управляет существительным и отвечает на вопрос «где?». В остальных предложениях «вокруг» — предлог при существительном в родительном падеже. Пример: Вокруг шумел лес."],
+["mor",2,"Какой глагол не употребляется в форме 1-го лица единственного числа (я ...)?",["победить","любить","писать","читать"],0,"«Победить» — недостаточный глагол: форма «побежу» нормой не признана, говорят «одержу победу». Пример: «стану победителем»."],
+["fra",1,"Какой фразеологизм НЕ означает «бездельничать»?",["бить баклуши","сидеть сложа руки","гонять лодыря","ломать голову"],3,"«Ломать голову» значит «напряжённо думать». Остальные выражения называют безделье. Пример: ломать голову над задачей."],
+["mor",2,"К какому спряжению относится глагол «стелить» (стелю, стелешь)?",["I спряжение","II спряжение"],0,"«Стелить» — исключение: на -ить, но I спряжение (как брить). Формы: стелю, стелешь, стелют. Пример: брить — бреешь, бреют."],
+["pun",2,"Сколько запятых нужно в предложении: «Я думал что ты придёшь и что мы увидимся»? Ответ — цифрой.",null,["1","одна"],"Запятая нужна перед первым «что». Перед «и что» запятая не ставится: одиночный союз И соединяет однородные придаточные. Пример: Я знал, что он прав и что мы победим."],
+["kul",1,"Какое слово является омографом (пишется одинаково, а произносится по-разному)?",["атлас","стол","мама","окно"],0,"Омографы различаются ударением: Атлас (сборник карт) и атлАс (ткань). Пример: зАмок — замОк."],
+["mor",1,"Как пишется предлог в предложении: «(В)следствие ливня матч отменили»?",["слитно","раздельно"],0,"Производный предлог «вследствие» (= из-за) пишется слитно. Существительное «в следствии» (по делу) — раздельно. Пример: ввиду холодов — слитно, в течение недели — раздельно."],
+["orf",2,"В каком предложении пишется слитно союз ЧТОБЫ?",["Я пришёл, (что)бы помочь.","(Что)бы ты ни делал, помни о долге.","Я не знаю, (что)бы это значило.","(Что)бы такое придумать?"],0,"Союз «чтобы» (= для того чтобы) пишется слитно. В остальных предложениях это местоимение «что» с частицей «бы» — раздельно. Пример: Я позвонил, чтобы узнать новости; Что бы ты сделал на моём месте?"],
+["fon",2,"Сколько в слове «чайка» согласных звуков, которые всегда мягкие? Ответ — цифрой.",null,["2","два"],"Звуки [ч’] и [й’] всегда мягкие: [ч’ай’ка]; [к] твёрдый. Пример: в слове «щётка» всегда мягкий только [щ’]."],
+["mor",1,"Как пишется предлог в предложении: «Он шёл (на)встречу ветру»?",["слитно","раздельно"],0,"Производный предлог «навстречу» с дательным падежом (ветру) пишется слитно. Существительное с предлогом — раздельно: идти на встречу друзей. Пример: навстречу солнцу."],
+["mor",2,"Сколько частиц в предложении «Неужели даже ты не пришёл?» Ответ — цифрой.",null,["3","три"],"Частицы: «неужели», «даже», «не». «Ты» — местоимение, «пришёл» — глагол. Пример: Разве и он не знал? — 3 частицы."],
+["pun",1,"Сколько запятых нужно в предложении: «Мы шли по лесу и слушали как поют птицы»? Ответ — цифрой.",null,["1","одна"],"Запятая нужна перед «как». «Шли» и «слушали» — однородные сказуемые, запятая между ними не нужна. Пример: Мы сели и смотрели, как падает снег."]];
+const AL=T.map((_,i)=>i).filter(i=>!T[i][6]);
+const AR={"Слова-исключения":["Одна Н: кроме стеклянный, оловянный, деревянный — в них НН.","II спряжение: гнать, держать, дышать, слышать, видеть, ненавидеть, обидеть, зависеть, терпеть, вертеть, смотреть.","Ь у существительных ж. р. на шипящую: рожь, ночь, мышь; без Ь: нож, плащ, мяч."],
+"Сложные слова":["звонИт, красИвее, тОрты, бАнты, кУхонный, алфавИт, квартАл, каталОг, договОр, шофЁр.","рассчитать, ссора, жалюзи, здравствуйте (В не читается), чувство (В не читается)."],
+"Фразеологизмы":["бить баклуши — бездельничать","водить за нос — обманывать","как снег на голову — неожиданно","ахиллесова пята — слабое место","засучив рукава — усердно"],
+"Языковые факты":["В русском алфавите 33 буквы: 10 гласных, 21 согласная, а ь и ъ звуков не обозначают.","Букву Ё предложила Екатерина Дашкова в 1783 году.","Самая частая буква русского языка — О."],
+"Частые ошибки":["ихний — их","одеть/надеть: надеваем вещь, одеваем человека","оплатить за проезд — оплатить проезд","по приезду — по приезде","ложить — класть"],
+"Сложные правила":["НЕ слитно, если слово без НЕ не употребляется или заменяется синонимом (ненавидеть, неправда).","Причастный оборот после определяемого слова выделяется запятыми, перед ним — нет.","Деепричастный оборот выделяется запятыми.","В ССП запятая ставится перед союзом, соединяющим части с разными основами."]};
+const TS_=[["alt","ALT MODE",["#0d0d0f","#39ff14","#9d4edd"]],["cute","CUTE MODE",["#fff4ec","#ff8fb8","#b8e0d2"]],["cyber","CYBER MODE",["#050b24","#00e5ff","#ff2bd6"]],["classic","CLASSIC MODE",["#f5f7fa","#3b6fd4","#c8d3e6"]]];
+let S={th:matchMedia('(prefers-color-scheme: dark)').matches?'alt':'classic',name:'',st:{},h:[],streak:0,ld:'',fl:[],last:null,dq:{},note:'',ac:[]};
+try{Object.assign(S,JSON.parse(localStorage.getItem('rus7')))}catch(e){}
+const save=()=>{try{localStorage.setItem('rus7',JSON.stringify(S))}catch(e){}},today=()=>new Date().toISOString().slice(0,10);
+const sv=()=>Object.values(S.st),done=()=>Object.keys(S.st).filter(i=>T[i]&&!T[i][6]).length,tot=()=>sv().reduce((a,s)=>a+s.a,0),cor=()=>sv().reduce((a,s)=>a+s.c,0);
+const tps=k=>{let a=0,c=0;T.forEach((t,i)=>{if(t[0]==k&&S.st[i]){a+=S.st[i].a;c+=S.st[i].c}});return{a,c,p:a?Math.round(c/a*100):0}},weak=k=>{const s=tps(k);return s.a>=3&&s.p<60};
+const dl=()=>{const c=cor();return c<8?0:c<20?1:2},lvn=()=>{const c=cor();return["Новичок","Ученик","Знаток","Олимпиадник"][c<8?0:c<20?1:c<35?2:3]};
+const nx=()=>{let r=T.findIndex((t,i)=>!t[6]&&t[1]<=dl()&&!S.st[i]);if(r<0)r=T.findIndex((t,i)=>!t[6]&&S.st[i]&&!S.st[i].c);return r<0?0:r};
+const AC=[["Первый шаг","1 задание выполнено",()=>done()>=1],["Десятка","10 верных ответов",()=>cor()>=10],["Полсотни","50 ответов",()=>tot()>=50],["Серия 3","3 дня подряд",()=>S.streak>=3],["Серия 7","7 дней подряд",()=>S.streak>=7],["Олимпиец","3 верных задания OLYMPIAD",()=>T.filter((t,i)=>t[1]==2&&S.st[i]&&S.st[i].c).length>=3],["Охотник","3 сложных задания отмечено ★",()=>S.fl.length>=3],["Эрудит","верный ответ в 8 темах",()=>Object.keys(TP).filter(k=>tps(k).c).length>=8]];
+function toast(t){const d=document.createElement('div');d.className='ts';d.textContent=t;document.body.append(d);setTimeout(()=>d.remove(),3000)}
+function rec(i,ok){const s=S.st[i]||(S.st[i]={a:0,c:0});s.a++;if(ok)s.c++;S.last=i;S.h.unshift({i,ok,d:today()});S.h=S.h.slice(0,100);const t=today();if(S.ld!=t){const y=new Date(Date.now()-864e5).toISOString().slice(0,10);S.streak=S.ld==y?S.streak+1:1;S.ld=t}AC.forEach(a=>{if(!S.ac.includes(a[0])&&a[2]()){S.ac.push(a[0]);toast('🏆 Достижение: '+a[0])}});save()}
+function card(i,cb){const[k,l,q,o,a,e]=T[i],d=document.createElement('div');d.className='card';
+d.innerHTML=`<div class=tg><span>${TP[k]}</span><span>${LV[l]}</span><button class=fl title="Отметить как сложное">${S.fl.includes(i)?'★':'☆'}</button></div><p class=q>${q}</p><div class=in></div><div class=rs></div>`;
+const fl=d.querySelector('.fl'),inn=d.querySelector('.in'),rs=d.querySelector('.rs');
+fl.onclick=()=>{S.fl.includes(i)?S.fl=S.fl.filter(x=>x!=i):S.fl.push(i);fl.textContent=S.fl.includes(i)?'★':'☆';save()};
+const fin=ok=>{rec(i,ok);inn.querySelectorAll('button,input').forEach(x=>x.disabled=true);if(o)inn.querySelector('[data-o="'+a+'"]').classList.add('good');
+rs.innerHTML=`<p><b class=${ok?'ok':'no'}>${ok?'✓ Верно!':'✗ Неверно.'}</b>${ok?'':' Правильный ответ: <b>'+(o?o[a]:a[0])+'</b>.'}</p><p>${e}</p>`+(!ok&&weak(k)?`<p class=ad>Тема «${TP[k]}» пока даётся трудно. <button data-go=theory data-x=${k}>Повторить теорию</button> <button data-go=olymp data-x=${k}>Доп. упражнения</button></p>`:'');cb&&cb(ok,d)};
+if(o)o.map((t,j)=>[t,j]).sort(()=>Math.random()-.5).forEach(([t,j])=>{const b=document.createElement('button');b.className='op';b.dataset.o=j;b.textContent=t;b.onclick=()=>{if(j!=a)b.classList.add('bad');fin(j==a)};inn.append(b)});
+else{inn.innerHTML='<input placeholder="Твой ответ"> <button>Ответить</button>';const x=inn.querySelector('input'),sb=()=>{if(x.value.trim())fin(a.some(z=>n(z)==n(x.value)))};inn.querySelector('button').onclick=sb;x.onkeydown=ev=>{if(ev.key=='Enter')sb()}}
+return d}
+const V={};let cur='dash',OF={l:-1,k:'',f:0},TM={e:0,id:0},TS=null;
+const NAV=[['dash','DASHBOARD'],['theory','THEORY.exe'],['olymp','OLYMPIAD.exe'],['test','TEST.exe'],['arch','ARCHIVE'],['daily','DAILY QUEST'],['prog','PROGRESS']];
+function go(v,x){cur=v;document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.go==v));const m=$('#m');m.innerHTML='';V[v](m,x);scrollTo(0,0)}
+const tops=sel=>`<option value="">Все темы${Object.keys(TP).map(k=>`<option value=${k}>${TP[k]}`).join('')}`;
+V.dash=m=>{const t=tot(),c=cor();m.innerHTML=`<h2>Привет${S.name?', '+esc(S.name):''}!</h2><div class=pn><input id=nm placeholder="Твоё имя" value="${esc(S.name)}"><div class=big id=ck></div><div id=dt></div></div>
+<div class=gr><div class=pn><b>${done()}</b><br>заданий из ${AL.length}</div><div class=pn><b>${t?Math.round(c/t*100):0}%</b><br>верных ответов</div><div class=pn><b>${lvn()}</b><br>уровень</div><div class=pn><b>${S.streak||0}</b><br>дней подряд</div></div>
+<div class=pn><p>Рекомендуем по твоему уровню:</p><button data-go=task data-x=${nx()}>Следующее задание →</button> ${S.last!=null?`<button data-go=task data-x=${S.last}>Продолжить с последнего</button>`:''}</div>
+<div class=pn><p>Заметки:</p><textarea id=nt placeholder="Правила, которые хочу запомнить…">${esc(S.note)}</textarea></div>`;
+$('#nm').oninput=e=>{S.name=e.target.value;save()};$('#nt').oninput=e=>{S.note=e.target.value;save()};clk()};
+function clk(){const a=$('#ck');if(a){const d=new Date();a.textContent=d.toLocaleTimeString('ru-RU');$('#dt').textContent=d.toLocaleDateString('ru-RU',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}}
+V.task=(m,x)=>{x=+x;m.append(card(x));m.insertAdjacentHTML('beforeend',`<button data-go=task data-x=${AL[(AL.indexOf(x)+1)%AL.length]}>Следующее →</button> <button data-go=olymp>К списку</button>`)};
+V.theory=(m,x)=>{x=TP[x]?x:'orf';m.innerHTML=`<h2>THEORY.exe</h2><div class=chips>${Object.keys(TP).map(k=>`<button class="${k==x?'on':''}" data-go=theory data-x=${k}>${TP[k]}</button>`).join('')}</div><div class=pn><h3>${TP[x]}</h3><p>${TH[x]}</p></div><button data-go=olymp data-x=${x}>Задания по теме</button> <button id=chk>Проверь себя</button><div id=ck2></div>`;
+$('#chk').onclick=()=>{const ids=AL.filter(i=>T[i][0]==x);$('#ck2').innerHTML='';$('#ck2').append(card(ids[Math.random()*ids.length|0]))}};
+function tk(){const t=$('#tv'),r=TM.e-Date.now();if(TM.e&&r<=0){clearInterval(TM.id);TM.e=0;toast('⏰ Время вышло!');if(t)t.textContent='00:00';return}if(t&&TM.e){const s=Math.ceil(r/1e3);t.textContent=String(s/60|0).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}}
+V.olymp=(m,x)=>{if(TP[x])OF.k=x;m.innerHTML=`<h2>OLYMPIAD.exe</h2><div class=pn><div class=chips>${['Все',...LV].map((t,j)=>`<button class="${OF.l==j-1?'on':''}" data-j=${j-1}>${t}</button>`).join('')}</div><p><select id=ok>${tops()}</select> <label><input type=checkbox id=of ${OF.f?'checked':''}> только ★</label></p><p>Таймер: <select id=tm><option>10<option selected>20<option>30</select> мин <button id=ts>Старт</button> <b id=tv></b></p></div><div id=ls></div>`;
+$('#ok').value=OF.k;$('#ok').onchange=e=>{OF.k=e.target.value;go('olymp')};$('#of').onchange=e=>{OF.f=e.target.checked?1:0;go('olymp')};
+m.querySelectorAll('[data-j]').forEach(b=>b.onclick=()=>{OF.l=+b.dataset.j;go('olymp')});
+$('#ts').onclick=()=>{clearInterval(TM.id);TM.e=Date.now()+$('#tm').value*6e4;TM.id=setInterval(tk,500);tk()};tk();
+const ids=AL.filter(i=>(OF.l<0||T[i][1]==OF.l)&&(!OF.k||T[i][0]==OF.k)&&(!OF.f||S.fl.includes(i)));
+$('#ls').innerHTML=`<p>Найдено заданий: ${ids.length}</p>`;ids.forEach(i=>$('#ls').append(card(i)))};
+V.test=m=>{if(!TS){m.innerHTML=`<h2>TEST.exe</h2><div class=pn><p>Тема: <select id=tk>${tops()}</select></p><p>Уровень: <select id=tl><option value=-1>Любой<option value=0>BASIC<option value=1>ADVANCED<option value=2>OLYMPIAD</select> Заданий: <select id=tn><option>5<option selected>10<option>15</select></p><button id=tg>Начать тест</button></div>`;
+$('#tg').onclick=()=>{const k=$('#tk').value,l=+$('#tl').value,ids=AL.filter(i=>(!k||T[i][0]==k)&&(l<0||T[i][1]==l)).sort(()=>Math.random()-.5);if(!ids.length)return toast('Нет заданий');TS={ids:ids.slice(0,+$('#tn').value),i:0,r:[]};go('test')};return}
+if(TS.i>=TS.ids.length){const ok=TS.r.filter(x=>x.ok).length,bad=TS.r.filter(x=>!x.ok);m.innerHTML=`<h2>Результат</h2><div class=pn><b class=big>${ok}/${TS.ids.length}</b> (${Math.round(ok/TS.ids.length*100)}%)</div>${bad.length?'<h3>Разбор ошибок</h3>'+bad.map(x=>{const t=T[x.i];return`<div class=pn><p>${t[2]}</p><p>Ответ: <b>${t[3]?t[3][t[4]]:t[4][0]}</b></p><p>${t[5]}</p></div>`}).join(''):'<p>Без ошибок! 🎉</p>'}<button id=rt>Пройти ещё раз</button> <button id=nt2>Новый тест</button>`;
+$('#rt').onclick=()=>{TS.i=0;TS.r=[];go('test')};$('#nt2').onclick=()=>{TS=null;go('test')};return}
+m.innerHTML=`<h2>TEST.exe</h2><p>Вопрос ${TS.i+1} из ${TS.ids.length}</p>`;const id=TS.ids[TS.i];
+m.append(card(id,(ok,d)=>{TS.r.push({i:id,ok});const b=document.createElement('button');b.textContent=TS.i+1<TS.ids.length?'Дальше →':'Результаты';b.onclick=()=>{TS.i++;go('test')};d.append(b)}))};
+V.arch=(m,x)=>{x=AR[x]?x:Object.keys(AR)[0];m.innerHTML=`<h2>ARCHIVE</h2><div class=chips>${Object.keys(AR).map(k=>`<button class="${k==x?'on':''}" data-go=arch data-x="${k}">${k}</button>`).join('')}</div><div class=pn>${AR[x].map(t=>`<p>• ${t}</p>`).join('')}</div>`};
+V.daily=m=>{const t=today(),i=AL[(Math.floor(Date.now()/864e5)*7)%AL.length];m.innerHTML=`<h2>DAILY QUEST</h2><p>Задание на ${t}. ${S.dq[t]?'✔ Уже выполнено сегодня.':'Ещё не выполнено.'} Серия: ${S.streak} дн.</p>`;m.append(card(i,ok=>{S.dq[t]=ok?2:1;save()}))};
+V.prog=m=>{const c=cor(),t=tot(),wk=Object.keys(TP).filter(weak),rows=Object.keys(TP).map(k=>{const s=tps(k),all=T.filter(x=>x[0]==k&&!x[6]).length,dn=T.filter((x,i)=>x[0]==k&&!x[6]&&S.st[i]).length;return`<div>${TP[k]}: ${dn}/${all}, точность ${s.a?s.p+'%':'—'} ${weak(k)?'⚠':''}<div class=bar><i style="width:${s.p}%"></i></div></div>`}).join('');
+m.innerHTML=`<h2>PROGRESS</h2><div class=gr><div class=pn><b>${Math.round(done()/AL.length*100)}%</b><br>выполнено (${done()}/${AL.length})</div><div class=pn><b>${c}</b><br>верных</div><div class=pn><b>${t-c}</b><br>неверных</div><div class=pn><b>${S.streak}</b><br>серия дней</div></div>
+<div class=pn><h3>По темам</h3>${rows}</div><div class=pn><h3>Слабые темы</h3>${wk.length?wk.map(k=>`<button data-go=theory data-x=${k}>${TP[k]}</button>`).join(' '):'Пока нет — так держать!'}</div>
+<div class=pn><h3>Сложные задания ★</h3>${S.fl.length?S.fl.map(i=>`<p class=link data-go=task data-x=${i}>${T[i][2]}</p>`).join(''):'Отмечай задания звёздочкой ☆, чтобы вернуться к ним.'}</div>
+<div class=pn><h3>Достижения</h3>${AC.map(a=>`<div class="${S.ac.includes(a[0])?'':'lk'}">🏆 <b>${a[0]}</b> — ${a[1]}</div>`).join('')}</div>
+<div class=pn><h3>История занятий</h3>${S.h.slice(0,15).map(x=>`<div>${x.d} · ${x.ok?'✓':'✗'} · ${T[x.i][2].slice(0,45)}…</div>`).join('')||'Пока пусто'}</div><button id=rst>Сбросить прогресс</button>`;
+$('#rst').onclick=function(){if(this.dataset.s){S={...S,st:{},h:[],streak:0,ld:'',fl:[],last:null,dq:{},ac:[]};save();go('prog')}else{this.dataset.s=1;this.textContent='Точно сбросить? Нажми ещё раз'}}};
+V.find=(m,x)=>{const q=n(x),th=Object.keys(TP).filter(k=>n(TP[k]+' '+TH[k]).includes(q)),ts=AL.filter(i=>n(T[i][2]+' '+T[i][5]).includes(q));
+m.innerHTML=`<h2>Поиск: ${esc(x)}</h2><h3>Теория (${th.length})</h3>${th.map(k=>`<div class="pn link" data-go=theory data-x=${k}>${TP[k]}</div>`).join('')}<h3>Задания (${ts.length})</h3>${ts.map(i=>`<div class="pn link" data-go=task data-x=${i}>${T[i][2]}</div>`).join('')}`};
+function setTheme(t){document.documentElement.dataset.th=S.th=t;save()}
+$('#nv').innerHTML=NAV.map(a=>`<button data-go=${a[0]}>${a[1]}</button>`).join('');
+$('#thm').innerHTML=TS_.map(a=>`<button data-pick=${a[0]}><span class=pv style="background:${a[2][0]}"><i style="background:${a[2][1]}"></i><i style="background:${a[2][2]}"></i></span>${a[1]}</button>`).join('');
+$('#thb').onclick=()=>{$('#thm').hidden=!$('#thm').hidden};
+document.addEventListener('click',e=>{const t=e.target.closest('[data-pick]');if(t){setTheme(t.dataset.pick);$('#thm').hidden=true}if(!e.target.closest('.thw'))$('#thm').hidden=true;const b=e.target.closest('[data-go]');if(b&&!b.disabled)go(b.dataset.go,b.dataset.x)});
+$('#sq').oninput=e=>{const v=e.target.value.trim();v.length>1?go('find',v):go('dash')};
+setInterval(clk,1000);setTheme(TS_.some(a=>a[0]==S.th)?S.th:'classic');go('dash');
+</script></body></html>
